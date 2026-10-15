@@ -95,3 +95,73 @@ void main() {
       break;
   }
 }
+
+
+
+
+  import 'dart:io';
+
+void main() {
+  stdout.write("Введите ваше имя: ");
+  String name = stdin.readLineSync()!;
+
+  stdout.write("Введите ваш город: ");
+  String city = stdin.readLineSync()!;
+
+  stdout.write("Введите ваш любимый язык программирования: ");
+  String language = stdin.readLineSync()!;
+
+  print("$name из города $city, уважает $language — отличный выбор!");
+
+  stdout.write("Введите текущий год: ");
+  String currentYearInput = stdin.readLineSync()!;
+
+  stdout.write("Введите год вашего рождения: ");
+  String birthYearInput = stdin.readLineSync()!;
+
+  int currentYear = int.parse(currentYearInput);
+  int birthYear = int.parse(birthYearInput);
+
+  int age = currentYear - birthYear;
+
+  print("Ваш точный возраст: $age");
+
+
+
+  stdout.write("Введите первое число: ");
+  String firstInput = stdin.readLineSync()!;
+
+  stdout.write("Введите второе число: ");
+  String secondInput = stdin.readLineSync()!;
+
+
+  double num1 = double.parse(firstInput);
+  double num2 = double.parse(secondInput);
+
+  double sum = num1 + num2;
+  double difference = num1 - num2;
+  double product = num1 * num2;
+
+  print("\nРезультаты вычислений:");
+  print("Сложение ($num1 + $num2): $sum");
+  print("Вычитание ($num1 - $num2): $difference");
+  print("Умножение ($num1 * $num2): $product");
+
+  
+    for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+  print("Кто не спрятался — я не виноват!");
+
+  for (int i = 5; i >= 1; i--) {
+    print(i);
+  }
+  print("Поехали!");
+
+  int totalSlices = 8;
+
+  for (int i = 1; i <= totalSlices; i++) {
+    int remaining = totalSlices - i;
+    print("Я съел кусочек номер $i. Осталось кусочков: $remaining");
+  }
+}
